@@ -1,3 +1,4 @@
+// Pet's owner
 public class Owner {
     // Attributes
     private String name;
