@@ -1,4 +1,4 @@
-public class Pet{
+public abstract class Pet{
     // Attributes
     private String name;
     private String bloodType;
