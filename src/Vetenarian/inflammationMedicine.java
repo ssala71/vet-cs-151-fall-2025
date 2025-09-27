@@ -1,3 +1,4 @@
+package Vetenarian;
 public class inflammationMedicine extends Medication implements Service{
     /** There's no reason to re-modify the medication names and price */
     private final String medicationName = "Inflammmation Medicine";

@@ -1,3 +1,4 @@
+package Vetenarian;
 public class Vet {
     public String Name;
     public String Gender;

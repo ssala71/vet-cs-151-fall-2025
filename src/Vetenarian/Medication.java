@@ -1,3 +1,4 @@
+package Vetenarian;
 public abstract class Medication implements Service{
     /** There's no reason to re-modify the medication names and price */
     public abstract String toHeal();

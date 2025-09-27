@@ -1,4 +1,4 @@
-package Vetenarian;
+package Vet;
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class Main {
 
         new Owner(name,number,address,email,age);
 
-        System.out.println("Thank you!");
+        System.out.println("Thank you.");
 
     }
 }
