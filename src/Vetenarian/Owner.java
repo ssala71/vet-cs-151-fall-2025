@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 // Pet's owner
 public class Owner {
-    // Attributes
+    // Attributes 
     private String name;
     private String phoneNumber;
     private String email;
@@ -16,7 +16,8 @@ public class Owner {
 
     HashMap<String, ArrayList<String> > list = new HashMap<>();
 
-    // Constructor
+    // Constructor 
+    // Testing
     public Owner(String name, String phoneNumber, String email, String address, int age){
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -24,4 +25,6 @@ public class Owner {
         this.address = address;
         this.age = age;
     }
+    int x = 4;
 }
+
