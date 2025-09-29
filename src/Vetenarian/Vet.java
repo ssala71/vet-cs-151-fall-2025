@@ -13,4 +13,8 @@ public class Vet {
         this.isAvailible = isAvailible;
     }
 
+    public String getName(){
+        return this.Name;
+    }
+
 }
