@@ -17,7 +17,7 @@ public class Owner {
     HashMap<String, ArrayList<String> > list = new HashMap<>();
 
     // Constructor 
-    // Testing
+    
     public Owner(String name, String phoneNumber, String email, String address, int age){
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -25,6 +25,39 @@ public class Owner {
         this.address = address;
         this.age = age;
     }
-    int x = 4;
+
+    // Getter
+    public String getName() {
+        return this.name;
+    }
+    public String getPhoneNumber(){
+        return this.phoneNumber;
+    }
+    public String email(){
+        return this.email;
+    }
+    public String address(){
+        return this.address;
+    }
+    public int age(){
+        return this.age;
+    }
+
+    // Setter
+    public void setName(String ownerName){
+        this.name = ownerName;
+    }
+    public void setPhoneNumber(String phoneNumber){
+        this.phoneNumber = phoneNumber;
+    }
+    public void setEmail(String email){
+        this.email = email;
+    }
+    public void setAddress(String address){
+        this.address = address;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
 }
 
