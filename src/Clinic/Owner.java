@@ -1,10 +1,10 @@
-package Vetenarian;
+package Clinic;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 // Pet's owner
-public class Owner {
+public class Owner implements Menu{
     // Attributes 
     private String name;
     private String phoneNumber;
@@ -17,7 +17,6 @@ public class Owner {
     HashMap<String, ArrayList<String> > list = new HashMap<>();
 
     // Constructor 
-    
     public Owner(String name, String phoneNumber, String email, String address, int age){
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -26,6 +25,7 @@ public class Owner {
         this.age = age;
     }
 
+    
     // Getter
     public String getName() {
         return this.name;
