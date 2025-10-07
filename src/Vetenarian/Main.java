@@ -24,7 +24,7 @@ public class Main {
         System.out.println("Final question. How old are you?");
         int age = scnr.nextInt();
 
-        new Owner(name,number,address,email,age);
+        Owner user = new Owner(name,number,address,email,age);
 
         System.out.println("Thank you!");
 
