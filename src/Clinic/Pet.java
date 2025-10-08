@@ -8,14 +8,16 @@ public abstract class Pet{
     private String speciesColor;
     private String gender;
     private int id;
+    private int ownerId;
 
     // Constructor
-    public Pet(String name, String bloodType, int age, String speciesColor, String gender, int id){
+    public Pet(String name, String bloodType, int age, String speciesColor, String gender, int ownerId){ 
         this.name = name;
         this.bloodType = bloodType;
         this.age = age;
         this.speciesColor = speciesColor;
         this.gender = gender;
-        this.id = id;
+        this.id = UUID.randomUUID().toString();
+        this.ownerId = ownerId;
     }
 }
