@@ -1,9 +1,11 @@
-package Vetenarian;
+package Clinic;
+
+
 public class coughingMedicine extends Medication implements Service{
 /** There's no reason to re-modify the medication names and price */
-    private final String medicationName = "CoughMedicine";
-    private final double price = 50.0;
-
+    public coughingMedicine() {
+        super("Coughing Medication", 50.0,30); 
+    }
 
     @Override
     public String toHeal() {
@@ -12,7 +14,12 @@ public class coughingMedicine extends Medication implements Service{
 
     //still need to consider insurance. or maybe do insurance after the final cost
     public double getCost(){
-        return this.price;
+        return getPrice();
+    }
+
+    @Override
+    public String getDescription() {
+        return "Medication for treating coughing symptoms.";
     }
     
 }
