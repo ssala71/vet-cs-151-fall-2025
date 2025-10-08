@@ -25,7 +25,25 @@ public class Main {
         System.out.println("Final question. How old are you?");
         int age = scnr.nextInt();
 
+        System.out.println("Now let's move on to your pet.");
+
+        System.out.println("What's your pet's name?");
+        String petName = scnr.nextLine();
+
+        System.out.println("What's your pet's bloodType?");
+        String bloodType = scnr.nextLine();
+
+        System.out.println("What's your pet's age?");
+        int petAge = scnr.nextLine();
+
+        System.out.println("What color is your pet?");
+        String speciesColor = scnr.nextLine();
+
+        System.out.println("What's your pet's gender?");
+        String petGender = scnr.nextLine();
+
         Owner user = new Owner(name,number,address,email,age);
+        Pet pet = new Pet(petName, bloodType, petAge, speciesColor, petGender, user.getId());
 
         System.out.println("Thank you!");
         

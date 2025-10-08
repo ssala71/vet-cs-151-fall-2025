@@ -2,7 +2,7 @@ package Clinic;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
+import java.util.UUID;
 // Pet's owner
 public class Owner implements Menu{
     // Attributes 
@@ -11,6 +11,7 @@ public class Owner implements Menu{
     private String email;
     private String address;
     private int age;
+    private String id;
 
     protected ArrayList<String> pet = new ArrayList<>();
 
@@ -23,6 +24,7 @@ public class Owner implements Menu{
         this.email = email;
         this.address = address;
         this.age = age;
+        this.id = UUID.randomUUID().toString();
     }
 
     
@@ -41,6 +43,9 @@ public class Owner implements Menu{
     }
     public int age(){
         return this.age;
+    }
+    public String getId(){
+        return this.id;
     }
 
     // Setter
