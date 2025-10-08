@@ -56,6 +56,8 @@ public class Main {
         String petGender = scnr.nextLine();
         
         Pet pet = new Pet(petName, bloodType, petAge, speciesColor, petGender);
+        //Pet newPet = new Pet(petName, bloodType, petAge, speciesColor, petGender, petAge);
+        
         
         //need to fix the display and response to picking which vet to choose
         Vet generalVet = new Vet("Dr.", "male", 65, "General Expert", "Monday, Tuesday, Wednesday, Thursday");
