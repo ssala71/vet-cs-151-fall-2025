@@ -44,7 +44,7 @@ public class Main {
         String bloodType = scnr.nextLine();
 
         System.out.println("What's your pet's age?");
-        int petAge = scnr.nextLine();
+        int petAge = scnr.nextInt();
 
         System.out.println("What color is your pet?");
         String speciesColor = scnr.nextLine();
@@ -52,7 +52,8 @@ public class Main {
         System.out.println("What's your pet's gender?");
         String petGender = scnr.nextLine();
         
-        Pet pet = new Pet(petName, bloodType, petAge, speciesColor, petGender, user.getId());
+        //Pet newPet = new Pet(petName, bloodType, petAge, speciesColor, petGender, petAge);
+        
         
         Vet generalVet = new Vet("Dr.", "male", 65, "General Expert", "Monday, Tuesday, Wednesday, Thursday");
         Vet catVet = new Vet("Dr.", "female", 32, "Cat Expert", "Monday, Thursday, Saturday");
