@@ -16,4 +16,11 @@ public abstract class Medication implements Service{
     }
     int x=0;
     
+    /**
+     * Protected accessor for subclasses to read the medication price.
+     */
+    protected double getPrice() {
+        return this.price;
+    }
+    
 }

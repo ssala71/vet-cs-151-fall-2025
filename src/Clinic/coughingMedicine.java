@@ -14,7 +14,7 @@ public class coughingMedicine extends Medication implements Service{
 
     //still need to consider insurance. or maybe do insurance after the final cost
     public double getCost(){
-        return this.price;
+        return getPrice();
     }
 
     @Override
