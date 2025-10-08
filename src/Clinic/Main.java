@@ -2,6 +2,9 @@ package Clinic;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
@@ -44,7 +47,7 @@ public class Main {
         String bloodType = scnr.nextLine();
 
         System.out.println("What's your pet's age?");
-        int petAge = scnr.nextLine();
+        int petAge = scnr.nextInt();
 
         System.out.println("What color is your pet?");
         String speciesColor = scnr.nextLine();
@@ -52,8 +55,9 @@ public class Main {
         System.out.println("What's your pet's gender?");
         String petGender = scnr.nextLine();
         
-        Pet pet = new Pet(petName, bloodType, petAge, speciesColor, petGender, user.getId());
+        Pet pet = new Pet(petName, bloodType, petAge, speciesColor, petGender);
         
+        //need to fix the display and response to picking which vet to choose
         Vet generalVet = new Vet("Dr.", "male", 65, "General Expert", "Monday, Tuesday, Wednesday, Thursday");
         Vet catVet = new Vet("Dr.", "female", 32, "Cat Expert", "Monday, Thursday, Saturday");
         Vet dogVet = new Vet("Dr.", "male", 35, "Dog Expert", "Sunday, Tuesday, Thuesday, Saturday");
@@ -63,6 +67,42 @@ public class Main {
         ArrayList<Vet> vetList = new ArrayList<>();        //Testing
         VetMenu menu = new VetMenu();
         menu.displayVetenarians();
+
+        //Appointment Scheduling Section
+        System.out.println("Here are the availible appointment times for today:");
+        LocalTime time1 = LocalTime.of(12, 0);
+        LocalTime time2 = LocalTime.of(13, 0); //1pm
+        LocalTime time3 = LocalTime.of(14, 0); //2pm
+        LocalTime time4 = LocalTime.of(15, 0); //3pm
+        LocalTime time5 = LocalTime.of(16, 0); //4pm
+
+        System.out.println("1. " + time1);
+        System.out.println("2. " + time2);
+        System.out.println("3. " + time3);
+        System.out.println("4. " + time4);
+        System.out.println("5. " + time5);
+        System.out.println("Please enter your choice (1-5)");
+        int appointmentTime = scnr.nextInt();
+
+        //converting (int) appointmentTime into LocalTime reference 
+        LocalTime timeChoice;
+        if (appointmentTime == 1) {
+            timeChoice = time1;
+        } else if (appointmentTime == 2) {
+            timeChoice = time2;
+        }
+        else if (appointmentTime == 3) {
+            timeChoice = time2;
+        } 
+        else if (appointmentTime == 4) {
+            timeChoice = time2;
+        }
+        else {
+            timeChoice = time5;
+        }
+
+        LocalDateTime appointmentDateTime = LocalDateTime.of(LocalDate.now(), timeChoice);
+        System.out.println(appointmentDateTime);
 
     }
 
