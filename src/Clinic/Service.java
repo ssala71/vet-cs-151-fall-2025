@@ -1,5 +1,6 @@
 
 
-public class Service {
-
+public interface Service {
+    double getCost();
+    String getDescription();
 }

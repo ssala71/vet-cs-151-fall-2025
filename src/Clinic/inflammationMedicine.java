@@ -2,9 +2,10 @@
 
 public class inflammationMedicine extends Medication implements Service{
     /** There's no reason to re-modify the medication names and price */
-    private final String medicationName = "Inflammmation Medicine";
-    private final double price = 100.0;
 
+    public inflammationMedicine() {
+        super("Anti-Inflammatory Cream", 100.00,1); 
+    }
 
     @Override
     public String toHeal() {

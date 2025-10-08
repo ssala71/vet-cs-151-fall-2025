@@ -1,7 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "src/tests",
-        "src/Clinic"
+        "src"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [

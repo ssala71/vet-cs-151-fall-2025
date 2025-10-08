@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 // Pet's owner
-public class Owner implements Menu{
+public class Owner{
     // Attributes 
     private String name;
     private String phoneNumber;
@@ -24,7 +24,7 @@ public class Owner implements Menu{
         this.email = email;
         this.address = address;
         this.age = age;
-        this.id = UUID.randomUUID().toString();
+        //this.id = UUID.randomUUID().toString();
     }
 
     

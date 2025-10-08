@@ -1,4 +1,4 @@
-
+package Clinic;
 
 import java.util.HashMap;
 
