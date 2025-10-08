@@ -14,5 +14,6 @@ public abstract class Medication implements Service{
         this.numDosesInStock = numDosesInStock;
         //this.expirationDate; // get from appointment
     }
+    int x=0;
     
 }
