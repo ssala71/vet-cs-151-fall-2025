@@ -1,4 +1,4 @@
-
+package Clinic;
 
 
 public class coughingMedicine extends Medication implements Service{
