@@ -25,7 +25,17 @@ public class Main {
         System.out.println("Final question. How old are you?");
         int age = scnr.nextInt();
 
-        System.out.println("Now let's move on to your pet.");
+
+        Owner user = new Owner(name,number,address,email,age);
+
+        System.out.println("Thank you!");
+        
+        //Maybe make an interface, first one would be in owner since it registers owner info
+        //This would be in pet and would
+        System.out.println("Now we would like to ask, register your pet.");
+        System.out.println("Now tell us what type of pet are you choosing");
+        System.out.println("Dog, Cat, Reptile, fish,Birds, Other");
+        String petType = scnr.nextLine();
 
         System.out.println("What's your pet's name?");
         String petName = scnr.nextLine();
@@ -41,18 +51,9 @@ public class Main {
 
         System.out.println("What's your pet's gender?");
         String petGender = scnr.nextLine();
-
-        Owner user = new Owner(name,number,address,email,age);
-        Pet pet = new Pet(petName, bloodType, petAge, speciesColor, petGender, user.getId());
-
-        System.out.println("Thank you!");
         
-        //Maybe make an interface, first one would be in owner since it registers owner info
-        //This would be in pet and would
-        System.out.println("Now we would like to ask, register your pet.");
-        System.out.println("Now tell us what type of pet are you choosing");
-        System.out.println("Dog, Cat, Reptile, fish,Birds, Other");
-
+        Pet pet = new Pet(petName, bloodType, petAge, speciesColor, petGender, user.getId());
+        
         Vet generalVet = new Vet("Dr.", "male", 65, "General Expert", "Monday, Tuesday, Wednesday, Thursday");
         Vet catVet = new Vet("Dr.", "female", 32, "Cat Expert", "Monday, Thursday, Saturday");
         Vet dogVet = new Vet("Dr.", "male", 35, "Dog Expert", "Sunday, Tuesday, Thuesday, Saturday");
