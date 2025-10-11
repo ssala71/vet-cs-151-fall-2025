@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 package Clinic;
 import java.util.UUID;
-=======
-
->>>>>>> c2b192461922faf144ffe6b34247d49ac4a1ba44
 
 
 public class Pet{

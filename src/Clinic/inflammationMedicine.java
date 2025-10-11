@@ -1,4 +1,4 @@
-
+package Clinic;
 
 public class inflammationMedicine extends Medication implements Service{
     /** There's no reason to re-modify the medication names and price */
@@ -15,7 +15,7 @@ public class inflammationMedicine extends Medication implements Service{
     //still need to consider insurance. or maybe do insurance after the final cost
     @Override
     public double getCost(){
-        return this.price;
+        return getPrice();
     }
 
     @Override

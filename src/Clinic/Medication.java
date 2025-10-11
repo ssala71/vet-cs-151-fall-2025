@@ -1,4 +1,4 @@
-
+package Clinic;
 
 public abstract class Medication implements Service{
     /** There's no reason to re-modify the medication names and price */
@@ -13,6 +13,14 @@ public abstract class Medication implements Service{
         this.price = price;
         this.numDosesInStock = numDosesInStock;
         //this.expirationDate; // get from appointment
+    }
+    int x=0;
+    
+    /**
+     * Protected accessor for subclasses to read the medication price.
+     */
+    protected double getPrice() {
+        return this.price;
     }
     
 }
