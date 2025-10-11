@@ -37,8 +37,8 @@ public class Main {
         //This would be in pet and would
         System.out.println("Now we would like to ask, register your pet.");
         System.out.println("Now tell us what type of pet are you choosing");
-        System.out.println("Dog, Cat, Reptile, fish,Birds, Other");
-        String petType = scnr.nextLine();
+        System.out.println("1.Dog \n 2. Cat\n 3. Reptile\n 4. Fish\n 5. Birds\n 6. Other");
+        int petType = scnr.nextInt();
 
         System.out.println("What's your pet's name?");
         String petName = scnr.nextLine();
@@ -59,16 +59,8 @@ public class Main {
         //Pet newPet = new Pet(petName, bloodType, petAge, speciesColor, petGender, petAge);
         
         
-        //need to fix the display and response to picking which vet to choose
-        Vet generalVet = new Vet("Dr.", "male", 65, "General Expert", "Monday, Tuesday, Wednesday, Thursday");
-        Vet catVet = new Vet("Dr.", "female", 32, "Cat Expert", "Monday, Thursday, Saturday");
-        Vet dogVet = new Vet("Dr.", "male", 35, "Dog Expert", "Sunday, Tuesday, Thuesday, Saturday");
-        Vet birdVet = new Vet("Dr.", "female", 28, "Bird Expert","Monday, Tuesday, Friday");
-        Vet reptileVet = new Vet("Dr.", "female", 25,"Reptile Expert","Friday, Tuesday");
-
-        ArrayList<Vet> vetList = new ArrayList<>();        //Testing
-        VetMenu menu = new VetMenu();
-        menu.displayVetenarians();
+        //Testing
+        
 
         //Appointment Scheduling Section
         System.out.println("Here are the availible appointment times for today:");
