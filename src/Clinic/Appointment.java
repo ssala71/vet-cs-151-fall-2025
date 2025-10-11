@@ -1,5 +1,8 @@
 package Clinic;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.HashMap;
 
 class Appointment{
@@ -13,8 +16,42 @@ class Appointment{
         
     }
 
-    public void displayAppointment(){
-        System.out.println("Based on your preferred Vetenarian");
+    public void displayAppointmentTime(){
+        //Appointment Scheduling Section
+        System.out.println("Here are the availible appointment times for today:");
+        LocalTime time1 = LocalTime.of(12, 0);
+        LocalTime time2 = LocalTime.of(13, 0); //1pm
+        LocalTime time3 = LocalTime.of(14, 0); //2pm
+        LocalTime time4 = LocalTime.of(15, 0); //3pm
+        LocalTime time5 = LocalTime.of(16, 0); //4pm
+
+        System.out.println("1. " + time1);
+        System.out.println("2. " + time2);
+        System.out.println("3. " + time3);
+        System.out.println("4. " + time4);
+        System.out.println("5. " + time5);
+        System.out.println("Please enter your choice (1-5)");
+        int appointmentTime = scnr.nextInt();
+
+        //converting (int) appointmentTime into LocalTime reference 
+        LocalTime timeChoice;
+        if (appointmentTime == 1) {
+            timeChoice = time1;
+        } else if (appointmentTime == 2) {
+            timeChoice = time2;
+        }
+        else if (appointmentTime == 3) {
+            timeChoice = time2;
+        } 
+        else if (appointmentTime == 4) {
+            timeChoice = time2;
+        }
+        else {
+            timeChoice = time5;
+        }
+
+        LocalDateTime appointmentDateTime = LocalDateTime.of(LocalDate.now(), timeChoice);
+        System.out.println(appointmentDateTime);
     }
 
     public void figureAppointmentDate(){
