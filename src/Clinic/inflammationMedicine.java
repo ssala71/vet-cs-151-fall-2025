@@ -20,13 +20,15 @@ public class inflammationMedicine extends Medication implements Service{
 
     @Override
     public String getDescription(){
-        return "Inflammation Medicine to help with burning sensations and ripped tissues";
+        return "Medication for treating pets with inflammation";
     }
 
     @Override
-    public int refillOrder() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'refillOrder'");
+    public void refillOrder() {
+        if (getStock() == 1){
+            System.out.println("Refilling Doses!");
+            setStock(30);
+        }
     }
 
 
