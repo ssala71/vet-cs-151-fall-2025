@@ -1,3 +1,4 @@
+
 package Clinic;
 
 import java.time.DayOfWeek;
@@ -49,13 +50,56 @@ public class Menu {
         System.out.println("Now we would like to ask for your name.");
         String name = readStringExit();
 
+        // Checks if name is empty, if so, prompts again
+        boolean notEmpty = false;
+        while (!notEmpty)
+        if (name.isEmpty()){
+            System.out.println("Come on, tell us your name!");
+            name = readStringExit();
+        }
+        else{
+            notEmpty = true;
+        }
+
         System.out.println("Great, lovely to meet you " + name + "! We would like a little bit more info before we proceed.");
 
         System.out.println("What number would we be able to contact you?");
         String number = readStringExit();
+        boolean validNumber = false;
+        while (!validNumber)
+        if (number.isEmpty()){
+            System.out.println("We need your number so that we can contact you!");
+            number = readStringExit();
+            if (number.length() != 10){
+                System.out.println("Please enter a valid 10-digit phone number.");
+                number = readStringExit();
+                if (!number.matches("\\d+")){
+                    System.out.println("Please enter only digits for your phone number.");
+                    number = readStringExit();
+                } else {
+                    validNumber = true;
+                }
+            }
+            else{
+                validNumber = true;
+            }
+        }
+        else{
+            validNumber = true;
+        }
 
         System.out.println("Perfect. Whats your email address to send you updates via email?");
         String email = readStringExit();
+        
+        boolean validEmail = false;
+        while (!validEmail){
+            if (!email.contains("@") || !email.contains(".")){
+                System.out.println("Please enter a valid email address.");
+                email = readStringExit();
+            } else {
+                validEmail = true;
+            }
+        }
 
         System.out.println("What address could we send mail to?");
         String address = readStringExit();
