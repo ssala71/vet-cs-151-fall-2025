@@ -70,21 +70,13 @@ public class Menu {
         if (number.isEmpty()){
             System.out.println("We need your number so that we can contact you!");
             number = readStringExit();
-            if (number.length() != 10){
-                System.out.println("Please enter a valid 10-digit phone number.");
-                number = readStringExit();
-                if (!number.matches("\\d+")){
-                    System.out.println("Please enter only digits for your phone number.");
-                    number = readStringExit();
-                } else {
-                    validNumber = true;
-                }
-            }
-            else{
-                validNumber = true;
-            }
-        }
-        else{
+        } else if (number.length() != 10){
+            System.out.println("Please enter a valid 10-digit phone number.");
+            number = readStringExit();
+        } else if (!number.matches("\\d+")){
+            System.out.println("Please enter only digits for your phone number.");
+            number = readStringExit();
+        } else {
             validNumber = true;
         }
 
@@ -331,6 +323,15 @@ public class Menu {
         //PET NAME
         System.out.println("\nWhat's your pet's name?");
         String petName = readStringExit();
+        boolean notEmpty = false;
+        while (!notEmpty)
+        if (petName.isEmpty()){
+            System.out.println("Come on, tell us your pet's name!");
+            petName = readStringExit();
+        }
+        else{
+            notEmpty = true;
+        }
 
         System.out.println("\nWhat's " + petName + "'s bloodType?");
         String[] bloodTypes = {"O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"};
@@ -349,10 +350,20 @@ public class Menu {
         //PET AGE
         System.out.println("\nWhat's " + petName +"'s age? (years)");
         int petAge = readIntExit();;
+        
 
         //PET COLOR
         System.out.println("\nWhat color is "+ petName+ "?");
         String speciesColor = readStringExit();
+        boolean hasColor = false;
+        while (!hasColor)
+        if (speciesColor.isEmpty()){
+            System.out.println("Come on, tell us your pet's color!");
+            speciesColor = readStringExit();
+        }
+        else{
+            hasColor = true;
+        }
         
         //PET GENDER
         System.out.println("\nWhat's "+petName+"'s gender? (1-2)");
