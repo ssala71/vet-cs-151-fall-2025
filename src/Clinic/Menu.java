@@ -506,7 +506,7 @@ public class Menu {
       for(Service service : services)
       {
         System.out.println(service.toString());
-        System.out.println("Purpose of medication: "+ service.getDescription() + "\n");
+        System.out.println("Purpose of service: "+ service.getDescription() + "\n");
         
       }
       System.out.println("Your total cost will be " + totalCost + ". Is that okay?");
@@ -542,7 +542,7 @@ public class Menu {
       System.out.println("It's time for the appointment with ." + appt.getVet().getName() + " for " + appt.getPet().getName() + ".");
       System.out.println(appt);
 
-      int result = (int)(Math.random() * 3);
+      int result = (int)(Math.random() * 4);
 
       if (result == 0) {
         System.out.println("Your pet is perfectly fine! No medicine needed.");
@@ -557,7 +557,7 @@ public class Menu {
          totalCost += cost;
          inflameMed.useOneDose();
          System.out.println("The inflammation medicine is around $" + cost + "\nAdded to total amount: " + totalCost + "\n");
-    } else {
+    } else if (result == 2) {
         coughingMedicine coughMedicine = new coughingMedicine();
         services.add(coughMedicine);
         System.out.println(coughMedicine.toHeal());
@@ -566,6 +566,14 @@ public class Menu {
         totalCost += cost;
         coughMedicine.useOneDose();
         System.out.println("The coughing medicine is around $" + cost + "\nAdded to total amount: " + totalCost + "\n");
+    } else {
+        Surgery surgery = new Surgery("Tumor removal", 90, 550.0, appt.getVet());
+        services.add(surgery);
+        System.out.println("Your pet needs surgery: " + surgery.getDescription());
+        double cost = surgery.getCost();
+        totalCost += cost;
+        System.out.println("The surgery costs around $" + cost + "\nAdded to total amount: " + totalCost + "\n");
+        appt.getVet().logSurgery(surgery, appt.getPet());
     }
     bookingHelper.cancel(appt);
     System.out.println("Total Cost: " + totalCost);
